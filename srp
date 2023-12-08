@@ -1,0 +1,31 @@
+# Клас, який не дотримується принципу єдиної відповідальності
+class Report:
+    def __init__(self, title, content):
+        self.title = title
+        self.content = content
+
+    def generate_report(self):
+        # Генерація звіту
+        pass
+
+    def save_to_file(self, filename):
+        # Збереження звіту у файл
+        pass
+
+# Клас, який дотримується принципу єдиної відповідальності
+class Report:
+    def __init__(self, title, content):
+        self.title = title
+        self.content = content
+
+# Окремий клас для генерації звіту
+class ReportGenerator:
+    def generate_report(self, report):
+        # Генерація звіту
+        pass
+
+# Окремий клас для збереження звіту у файл
+class ReportSaver:
+    def save_to_file(self, report, filename):
+        # Збереження звіту у файл
+        pass
